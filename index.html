@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--========// CDN LINK //========-->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /*---------------------
+            Active Show-Hide
+        ----------------------*/
+        .manege_nav {
+            z-index: 100;
+            width: 100%;
+            display:none;
+            opacity:0;
+            background-color: #eee;
+            top: 56px;
+            right: 0;
+        }
+        .menu_btn_active {
+            opacity: 1;
+            display:block;
+        }
+        /*---------End-------*/
+    
+    </style>
+</head>
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+            <i class='bx bxl-ok-ru'></i>
+            <span class="logo_name">Icon ISL</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <button class="country-btn-portugal">
+                    <a href="#">
+                        <i class='bx bx-book-alt'></i>
+                        <span class="link_name">Check</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </button>
+                <ul class="sub_menu manege_nav">
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Login Form</a></li>
+                    <li><a href="#">Card Design</a></li>
+                </ul>
+            </li>
+            <li>
+                <button class="country-btn-portugal">
+                    <a href="#" class="">
+                        <i class='bx bx-book-alt'></i>
+                        <span class="link_name">Post</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </button>
+                <ul class="manege_nav">
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Login Form</a></li>
+                    <li><a href="#">Card Design</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-pie-chart-alt-2'></i>
+                    <span class="link_name">Analytics</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Analytics</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-line-chart'></i>
+                    <span class="link_name">Chart</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Chart</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="country-btn-portugal">
+                    <a href="#" class="">
+                        <i class='bx bx-plug'></i>
+                        <span class="link_name">Plugins</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="manege_nav">
+                    <li><a href="#">UI Face</a></li>
+                    <li><a href="#">Pigments</a></li>
+                    <li><a href="#">Box Icons</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-compass'></i>
+                    <span class="link_name">Explore</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Explore</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-history'></i>
+                    <span class="link_name">History</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">History</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="link_name">Setting</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Setting</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <!--<img src="image/profile.jpg" alt="profileImg">-->
+                    </div>
+                    <div class="name-job">
+                        <div class="profile_name">Motiur Rahman</div>
+                        <div class="job">Web Desginer</div>
+                    </div>
+                    <i class='bx bx-log-out'></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu country-btn-portugal'></i><span class="text">Drop Down Sidebar</span>
+        </div>
+        <div>
+            <!--Menu Item-->		
+            <li class="">			
+                <a class="country-btn-portugal">Our Services <i class="fa-solid fa-caret-down"></i></button>     
+                <div class="manege_nav sub_menu_wrapper">
+                    <!--Sub menu-->
+                    <div class=""><a href="">Dashboard</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    
+    <script>
+        //Toggle Menu
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", () => {
+          sidebar.classList.toggle("close");
+        });
+        let iconmobile = document.querySelector(".manege_nav");
+        let sidebarBtn_MB = document.querySelector(".bx-menu");
+        console.log(sidebarBtn_MB);
+        sidebarBtn_MB.addEventListener("click", () => {
+            iconmobile.classList.toggle("Mobile_none");
+        });
+    </script>
+    <script>
+        //open menu
+        $('.country-btn-portugal').click(fnClick);
+
+        //--Menu Open & hide
+        function fnClick(e){
+            var $dd = $(this).next();
+            console.log($dd, this); 
+            $('.manege_nav').not($dd).removeClass('menu_btn_active');
+            $dd.toggleClass('menu_btn_active');
+        };
+
+        //Sceen Click Off
+        $(document).on("click", function(event){
+        var $trigger = $(".country-btn-portugal");
+        if($trigger !== event.target && !$trigger.has(event.target).length){
+                $(".manege_nav").slideUp("fast");
+            }            
+        });
+    </script>
+</body>
+
+</html>

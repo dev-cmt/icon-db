@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <!-------cdn link------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!--cdn alert--> 
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Clicky Menus CSS -->
+    <style>
+    /*---------------------
+        Active Show-Hide
+    ----------------------*/
+    .sub_menu_wrapper {
+        z-index: 100;
+        width: 100%;
+        display:none;
+        opacity:0;
+        background-color: #eee;
+        top: 56px;
+        right: 0;
+    }
+    .menu_btn_active {
+        opacity: 1;
+        display:block;
+    }
+    /*---------End-------*/
+
+    </style>
+</head>
+<body>
+    <!--======// Nav Menu //========-->
+    <section class="">	
+        <!--Menu Item-->		
+        <div class="">			
+            <button class="country-btn-portugal">Our Services <i class="fa-solid fa-caret-down"></i></button>     
+            <div class="manege_nav sub_menu_wrapper">
+                <!--Sub menu-->
+                <div class="sub_menu"><a href="">Dashboard</a></div>
+            </div>
+        </div>
+        <!--Menu Item-->		
+        <div class="">			
+            <button class="country-btn-portugal">Our Services <i class="fa-solid fa-caret-down"></i></button>     
+            <div class="manege_nav sub_menu_wrapper">
+                <!--Sub menu-->
+                <div class="sub_menu"><a href="">Dashboard</a></div>
+            </div>
+        </div>
+        <!--Menu Item-->		
+        <div class="">			
+            <button class="country-btn-portugal">Our Services <i class="fa-solid fa-caret-down"></i></button>     
+            <div class="manege_nav sub_menu_wrapper mr-animate-left">
+                <!--Sub menu-->
+                <div class="sub_menu"><a href="">Icon</a></div>
+            </div>
+        </div>
+    </div>
+    <!--------End---------->
+
+    <script>
+        //--Menu Open & hide
+        function fnClick(e){
+            var $dd = $(this).next();
+            console.log($dd, this); 
+            $('.manege_nav').not($dd).removeClass('menu_btn_active');
+            $dd.toggleClass('menu_btn_active');
+        };
+
+        //open menu
+        $('.country-btn-portugal').click(fnClick);
+    </script>
+</body>
+</html>
